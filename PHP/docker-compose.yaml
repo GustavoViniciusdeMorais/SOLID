@@ -1,0 +1,59 @@
+version: '3'
+
+services:
+    nginx:
+        build:
+            context: .
+            dockerfile: nginx.dockerfile
+        ports:
+            - 80:80
+        volumes:
+            - ./:/var/www/html
+        container_name: snginx
+        depends_on:
+            - php
+            - mysql
+        networks:
+            - solid-app-network
+
+    php:
+        build:
+            context: .
+            dockerfile: php.dockerfile
+        volumes:
+            - ./:/var/www/html
+        container_name: sphp
+        networks:
+            - solid-app-network
+
+    mysql:
+        image: mysql:5.7
+        restart: always
+        container_name: smysql
+        ports:
+            - 3306:3306
+        environment:
+            MYSQL_DATABASE: laravel
+            MYSQL_ROOT_PASSWORD: laravel
+        volumes:
+            - ./dockerDBData:/var/lib/mysql
+        networks:
+            solid-app-network:
+                ipv4_address: 10.0.0.8
+    
+    redis:
+        image: redis
+        container_name: sredis
+        ports:
+            - 6379:6379
+        networks:
+            solid-app-network:
+                ipv4_address: 10.0.0.9
+
+networks:
+    solid-app-network:
+        driver: bridge
+        ipam:
+            driver: default
+            config:
+                - subnet: "10.0.0.0/16"
