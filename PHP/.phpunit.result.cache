@@ -1,1 +1,1 @@
-{"version":1,"defects":[],"times":{"Gustavo\\Solid\\HtmlTest::testSimpleTest":0.05}}
+{"version":1,"defects":{"Gustavo\\Solid\\HtmlTest::testSimpleTest":4},"times":{"Gustavo\\Solid\\HtmlTest::testSimpleTest":0.032}}
