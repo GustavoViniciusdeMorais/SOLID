@@ -4,8 +4,10 @@ namespace Gustavo\Solid;
 
 class Html
 {
-    public function img(string $path)
+    public function __call(string $className, array $arguments)
     {
-        return "<img src=\"{$path}\">";
+        $class = '\Gustavo\Solid\Html\\' . ucfirst($className);
+
+        return call_user_func_array([new $class, 'render'], $arguments);
     }
 }

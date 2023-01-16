@@ -1,1 +1,1 @@
-{"version":1,"defects":{"Gustavo\\Solid\\HtmlTest::testSimpleTest":4},"times":{"Gustavo\\Solid\\HtmlTest::testSimpleTest":0.032}}
+{"version":1,"defects":{"Gustavo\\Solid\\HtmlTest::testSimpleTest":4,"Gustavo\\Solid\\HtmlTest::testImageAncor":4},"times":{"Gustavo\\Solid\\HtmlTest::testSimpleTest":0.036,"Gustavo\\Solid\\HtmlTest::testImageAncor":0.006}}
