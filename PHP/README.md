@@ -3,3 +3,6 @@
 Solid at PHP code.
 
 ![](/imgs/badCode.png)
+
+## Open Closed Principle Example
+![](/imgs/OpenClosed.png)
