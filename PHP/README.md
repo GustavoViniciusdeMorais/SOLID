@@ -6,3 +6,6 @@ Solid at PHP code.
 
 ## Open Closed Principle Example
 ![](/imgs/OpenClosed.png)
+
+## Dependency Inversion
+![](/imgs/DependencyInversion.png)
