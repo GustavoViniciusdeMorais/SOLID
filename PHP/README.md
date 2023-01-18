@@ -9,3 +9,6 @@ Solid at PHP code.
 
 ## Dependency Inversion
 ![](/imgs/DependencyInversion.png)
+
+## Interface Segregation
+![](/imgs/InterfaceCegragation.png)
