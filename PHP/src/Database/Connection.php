@@ -2,9 +2,9 @@
 
 namespace Gustavo\Solid\Database;
 
-use PDO;
+use Gustavo\Solid\Database\Database;
 
-class MySql implements Database
+class Connection
 {
     private $dns;
     private $user;
@@ -17,8 +17,8 @@ class MySql implements Database
         $this->password = $password;
     }
 
-    public function connect()
+    public function connect(Database $db)
     {
-        return new PDO($this->dns, $this->user, $this->password);
+        return $db->connect($this->dns, $this->user, $this->password);
     }
 }

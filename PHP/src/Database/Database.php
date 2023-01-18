@@ -4,5 +4,5 @@ namespace Gustavo\Solid\Database;
 
 interface Database
 {
-    public function connect();
+    public function connect($dns, $user, $password);
 }
